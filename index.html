@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 04</title>
+</head>
+<body>
+  <!---
+    <h3>Home Registration</h3>
+
+    <form>
+      <p>
+        <label>complementos </label>
+        <input type="text" name="comp" />
+      </p>
+  
+      <p>
+        <label>Número: </label>
+        <input type="text" name="numero" />
+      </p>
+  
+      <p>
+        <label>Bairro: </label>
+        <input type="text" name="bairro" />
+      </p>
+  
+      <p>
+        <label>Cidade: </label>
+        <input type="text" name="cidade" />
+      </p>
+  
+      <button onclick="saveHouse()" type="button">Salvar</button>
+    </form>
+  
+    <ul id="house-list"></ul>
+    
+
+  <form onsubmit="save()">
+    <p>
+      <label>Nome: </label>
+      <input type="text" name="name" />
+    </p>
+
+    <p>
+      <label>Programa em:</label>
+      <select name="programming-lang">
+        <option value="Javascript">Javascript</option>
+        <option value="Ruby">Ruby</option>
+        <option value="Python">Python</option>
+        <option value="PHP">PHP</option>
+      </select>
+    </p>
+
+    <button type="submit">Salvar</button>
+  </form>
+  
+ 
+  <style>
+    p.red-color {
+      color: red
+    }
+  </style>
+
+  <button type="button" onclick="setBlueBackground()">Fundo Azul</button>
+  <button type="button" onclick="setTransparentBackground()">Fundo Transparente</button>
+  <button type="button" onclick="setRedColor()">Fonte Vermelha</button>
+  <button type="button" onclick="removeRedColor()">Fonte Normal</button>
+
+  <br />
+
+  <p id="style-text">
+    Manipulando CSS via DOM
+  </p>
+ --->
+  <h3>Cadastro de Imóveis</h3>
+
+  <form onsubmit="app.addProperty()">
+    <p>
+      <label>Tipo: </label>
+      <select name="kind">
+        <option value="Apartamento">Apartamento</option>
+        <option value="Casa">Casa</option>
+      </select>
+    </p>
+
+    <p>
+      <label>Área: </label>
+      <input type="number" name="area" step="any" min="0" />
+    </p>
+
+    <p>
+      <input type="checkbox" name="rented" /> Alugado
+    </p>
+
+    <button type="submit">Salvar</button>
+    <button type="button" onclick="app.cleanForm()">Limpar</button>
+  </form>
+
+  <br />
+
+  <h3>Imóveis cadastrados</h3>
+
+  <ul id="properties"></ul>
+
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
